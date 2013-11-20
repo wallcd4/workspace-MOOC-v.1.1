@@ -168,26 +168,26 @@ public class Ballon {
 			
 			onTheScreen = true;
 			
-			if(posX < radius) {
-				posX = 2 * radius - posX;
+			if(posX < 0) {
+				posX = posX * -1;
 				velX = velX * -1;
 				onTheScreen = false;
 			}
 			
-			if(posX > maxPosX - radius) {
-				posX = (maxPosX - radius) * 2 - posX;
+			if(posX > maxPosX) {
+				posX = maxPosX * 2 - posX;
 				velX = velX * -1;
 				onTheScreen = false;
 			}
 			
-			if(posY < radius) {
-				posY = 2 * radius - posY;
+			if(posY < 0) {
+				posY = posY * -1;
 				velY = velY * -1;
 				onTheScreen = false;
 			}
 			
-			if(posY > maxPosY - radius) {
-				posY = (maxPosY - radius) * 2 - posY;
+			if(posY > maxPosY) {
+				posY = maxPosY * 2 - posY;
 				velY = velY * -1;
 				onTheScreen = false;
 			}

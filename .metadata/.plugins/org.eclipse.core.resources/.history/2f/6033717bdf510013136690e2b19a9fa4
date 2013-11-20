@@ -21,9 +21,8 @@ public class RedBall extends Ballon {
 	//
 	// Move overides the method in Ballon
 	//
-	 @Override
+/*	 @Override
 	 protected void move(float secondsElapsed, float maxPosX, float maxPosY) {
-		 
 		 
 		boolean onTheScreen = false;
 		 
@@ -35,29 +34,30 @@ public class RedBall extends Ballon {
 			onTheScreen = true;
 			
 			if(posX < radius) {
-				posX = 2 * radius - posX;
+				posX = posX * -1;
 				velX = velX * -1;
 				onTheScreen = false;
 			}
 			
-			if(posX > maxPosX - radius) {
-				posX = (maxPosX - radius) * 2 - posX;
+			if(posX > maxPosX) {
+				posX = maxPosX * 2 - posX;
 				velX = velX * -1;
 				onTheScreen = false;
 			}
 			
-			if(posY < radius) {
-				posY = 2 * radius - posY;
+			if(posY < 0) {
+				posY = posY * -1;
 				velY = velY * -1;
 				onTheScreen = false;
 			}
 			
-			if(posY > maxPosY - radius) {
+			if(posY > maxPosY) {
 				// Do nothing
+
 			}
-	
+			
 		}
 			
 	 }
-
+*/
 }
