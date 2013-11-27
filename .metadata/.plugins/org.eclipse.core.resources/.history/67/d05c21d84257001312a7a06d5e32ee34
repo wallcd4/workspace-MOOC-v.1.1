@@ -10,9 +10,9 @@ import android.graphics.Canvas;
  * Name				Revision	Date		Description
  * 					Change No.
  * 					1.0						Initial coding
- * David Wallace	1.1			06/11/2013	Add Ballon and it's children.
- * 											Code is moved from here to object
- * 											and so protects it.
+ * David Wallace	1.1			06/11/2013	Add Ballon
+ * 
+ * 
  *
  */
 

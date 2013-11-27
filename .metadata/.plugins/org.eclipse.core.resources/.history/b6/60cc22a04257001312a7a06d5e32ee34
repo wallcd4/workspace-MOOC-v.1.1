@@ -19,9 +19,7 @@ public class RedBall extends Ballon {
 	
 	
 	//
-	// Move overrides the method in Ballon
-	// @override needed as the number and type of parameters the same.
-	// So RedBalls use the overrided method.
+	// Move overides the method in Ballon
 	//
 	 @Override
 	 protected void move(float secondsElapsed, float maxPosX, float maxPosY) {

@@ -12,9 +12,7 @@ import uk.ac.reading.sis05kol.mooc.Ballon;
  */
 
 /*
- * This will be a yellow ball
- * Although 'empty' it allows any changes particular to
- * the Yellow ball to be included without affecting other children.
+ * This will be a non Smiley Face yellow ball
  */
 public class YellowBall extends Ballon{
 

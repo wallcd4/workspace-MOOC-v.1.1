@@ -12,9 +12,7 @@ import uk.ac.reading.sis05kol.mooc.Ballon;
  */
 
 /*
- * Class for a paddle.  Note move overrides move in Ballon, but
- * does not need @override as the number of parameters is different.
- * So Paddles uses this function, rather than that of the parent Ballon.
+ * Class for a paddle.  Not move overides move in Ballon
  */
 public class Paddle extends Ballon {
 

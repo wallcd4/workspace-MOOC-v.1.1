@@ -21,8 +21,6 @@ public class Ballon {
 
 	/**
 	 * Properties
-	 * protected means they are passed to inherited classes, but
-	 * not visible outside the class.  See the set/get functions.
 	 */
 
 	protected Bitmap image = null;
@@ -32,10 +30,6 @@ public class Ballon {
 	protected float velY = 0;
 	protected float radius = 0;
 
-	//
-	// Constructor code is executed when an oblect is created.
-	// E.g. private Ballon mBallon = new Ballon();
-	//
 	
 	/** Auto generated.  See Menu item Source
 	 * @param image
@@ -43,7 +37,6 @@ public class Ballon {
 	 * @param posY
 	 * @param velX
 	 * @param velY
-	 * Note radius is missing as it was added after automatic creation
 	 */
 	public Ballon(Bitmap image, float posX, float posY, float velX, float velY) {
 		this.image = image;
@@ -54,11 +47,12 @@ public class Ballon {
 		radius = calculateRadius();
 	}
 	
+	
+
+
 
 	//
 	// null constructor
-	// Constructors all have the same name, but different parameters.
-	// Should make make more sense after functions introduced.
 	//
 	public Ballon() {
 
@@ -146,11 +140,7 @@ public class Ballon {
 	}
 	
 	//
-	// Now add user code.
-	// Functions/Subroutines in 'old style' programing.
-	// Called methods in object orientated programming.
-	// New word just to confuse you.
-	// Syntax is mBall.move(secondsElapsed, mCanvasWidth, mCanvasHeight);
+	// Now add user code
 	//
 	 public void changeVel(float x, float y) {
 		 

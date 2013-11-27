@@ -2,7 +2,6 @@ package uk.ac.reading.sis05kol.mooc;
 
 
 //Other parts of the android libraries that we us
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 
@@ -10,9 +9,9 @@ import android.graphics.Canvas;
  * Name				Revision	Date		Description
  * 					Change No.
  * 					1.0						Initial coding
- * David Wallace	1.1			06/11/2013	Add Ballon and it's children.
- * 											Code is moved from here to object
- * 											and so protects it.
+ * David Wallace	1.1			06/11/2013	Add Ballon
+ * 
+ * 
  *
  */
 
@@ -23,7 +22,6 @@ public class TheGame extends GameThread{
 	private Paddle mPaddle = new Paddle();
 	private YellowBall mSmileyFace = new YellowBall();
 	private YellowBall[] mSadBall = new YellowBall[3];
-	private Bitmap mSadBallImage;
 
 	//This is run before anything else, so we can prepare things here
 	public TheGame(GameView gameView) {
@@ -52,10 +50,6 @@ public class TheGame extends GameThread{
 			mSadBall[i].setImage(BitmapFactory.decodeResource
 					(gameView.getContext().getResources(), 
 					R.drawable.sad_ball));
-		
-		mSadBallImage = (BitmapFactory.decodeResource
-				(gameView.getContext().getResources(), 
-				R.drawable.sad_ball));
 	}
 	
 	//This is run before a new game (also after an old game)
@@ -87,9 +81,6 @@ public class TheGame extends GameThread{
 		
 		mSadBall[2].setPosX(mCanvasWidth / 2);
 		mSadBall[2].setPosY((mCanvasHeight / 5));
-		
-		for(int i = 0; i < mSadBall.length; i++)
-			mSadBall[i].setImage(mSadBallImage);
 	}
 
 	@Override
@@ -113,8 +104,7 @@ public class TheGame extends GameThread{
 				mSmileyFace.getPosY() - mSmileyFace.getImage().getHeight() / 2, null);
 		
 		for(int i = 0; i < mSadBall.length; i++)
-			if(mSadBall[i].image != null)
-				canvas.drawBitmap(mSadBall[i].getImage(), mSadBall[i].getPosX() - mSadBall[i].getImage().getWidth() / 2,
+			canvas.drawBitmap(mSadBall[i].getImage(), mSadBall[i].getPosX() - mSadBall[i].getImage().getWidth() / 2,
 					mSadBall[i].getPosY() - mSadBall[i].getImage().getHeight() / 2, null);
 			
 	}
@@ -155,11 +145,8 @@ public class TheGame extends GameThread{
 		}
 		
 		for(int i = 0; i < mSadBall.length; i++)
-			if(mBall.collisionCheck(mSadBall[i])) {
+			if(mBall.collisionCheck(mSadBall[i]))
 				mBall.changeVelocity(mSadBall[i]);
-				mSadBall[i].image = null;
-			}
-
 		
 		if(mBall.posY > mCanvasHeight - mBall.getImage().getHeight() / 2)
 			setState(GameThread.STATE_LOSE);
