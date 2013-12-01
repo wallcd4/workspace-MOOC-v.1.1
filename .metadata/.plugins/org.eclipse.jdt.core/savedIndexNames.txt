@@ -1,4 +1,3 @@
 INDEX VERSION 1.126+C:\adt-bundle-windows-x86_64-20130917\workspace-MOOC-v.1.1\.metadata\.plugins\org.eclipse.jdt.core
 2624239386.index
 4099079099.index
-1276526808.index

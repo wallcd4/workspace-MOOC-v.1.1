@@ -360,3 +360,13 @@ Caused by: java.lang.ClassNotFoundException: Prohibited package name: java.lang
 	at java.lang.ClassLoader.loadClass(Unknown Source)
 	at java.lang.ClassLoader.loadClass(Unknown Source)
 	... 12 more
+!SESSION 2013-11-29 15:03:16.094 -----------------------------------------------
+eclipse.buildId=v22.2.1-833290
+java.version=1.6.0_20
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.android.ide.eclipse.adt.package.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-11-29 15:04:15.842
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
